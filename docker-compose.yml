@@ -6,8 +6,6 @@ services:
     container_name: php81
     volumes:
       - ./:/var/www/sugarcv.co.uk
-    ports:
-      - "9000:9000"
     networks:
       - host-net
 
