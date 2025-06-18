@@ -38,4 +38,4 @@ yarn-error.log
 composer.lock
 
 # Laravel Telescope (optional)
-storage/telescope/*
+storage/telescope/*vendor/
