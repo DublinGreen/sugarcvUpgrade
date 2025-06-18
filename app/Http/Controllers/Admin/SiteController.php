@@ -41,7 +41,7 @@ class SiteController extends Controller
     }
 
     public function postLogin () {
-        $data = \Input::get('data');
+        $data = $request->input('data');
 		
         try {
             $user = \Sentinel::authenticate([

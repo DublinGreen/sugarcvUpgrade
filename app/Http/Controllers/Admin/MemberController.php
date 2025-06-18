@@ -96,7 +96,7 @@ class MemberController extends Controller
      * @return json
      */
     public function register ($type) {
-        $data = \Input::get('data');
+        $data = $request->input('data');
 
         if (!$package = $this->PackageRepository->findById($data['package_id'])) {
             return \Response::json([
@@ -237,7 +237,7 @@ class MemberController extends Controller
      * @return json
      */
     public function postUpdate ($id) {
-        $data = \Input::get('data');
+        $data = $request->input('data');
         $member = $this->MemberRepository->findById(trim($id));
         $user = $member->user;
         $userData = [];

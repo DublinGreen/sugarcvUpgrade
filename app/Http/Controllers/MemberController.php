@@ -45,7 +45,7 @@ class MemberController extends Controller
      * @return [type] [description]
      */
     public function postLogin (Request $request) {
-        $data = \Input::get('data');
+        $data = $request->input('data');
 		try {
             $user = \Sentinel::authenticate([
                 'username'  =>  $data['username'],
