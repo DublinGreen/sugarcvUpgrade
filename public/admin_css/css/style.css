@@ -1,0 +1,79 @@
+
+.examples-group .examples-item {
+    border: none;
+    font-family: HK Grotesk,sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    min-height: 60px;
+    border: 1px solid #e8ecf0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(88,88,95,0.15);
+}
+
+.examples-group .examples-item>.example-icon {
+    position: relative;
+    width: 23px;
+    background-color: #3983fa;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    border-right: 1px solid #e8ecf0;
+    min-height: 60px;
+    margin: -1px 0 -1px -1px;
+}
+
+.examples-group .examples-item>.example-icon>button {
+    border-radius: 0 !important;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.examples-group .examples-item>.example-icon>button:before {
+    content: "ADD";
+    font-size: 11px;
+    font-family: HK Grotesk,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.examples-group .examples-item.selected>.example-icon>button:before {
+    content: "REMOVE";
+    color: #fff;
+}
+.examples-group .examples-item.selected .example-icon {
+    background-color: #e44747;
+}
+
+
+.examples-group .examples-item>.example-text {
+    padding: 12px 15px;
+    font-size: 14px;
+    width: calc(100% - 42px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+.richText-btn{
+	display:none !important;
+}
+
+.richText-btn[data-command="bold"],.richText-btn[data-command="Italic"],.richText-btn[data-command="underline"],.richText-btn[data-command="insertUnorderedList"]{
+	display:block !important;
+}
+.richText-toolbar ul {
+    margin: 0;
+    padding: 0;
+}

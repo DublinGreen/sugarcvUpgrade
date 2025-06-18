@@ -1,0 +1,131 @@
+/**** New CSS added ****/
+/*from mohit->want to restore prevoust css on this page related to  .enable-preview .disable-preview remove 's' from .enable-preview .disable-previews in below css*/
+@media only screen and (max-width: 962px) {
+.resume-thumbnail .resume-preview {width: 61%;margin: 15px auto;height: 320px;}
+.resume-thumbnail .btn-preview-ctnr {width: 100%;}
+.page-finalize #document .parentContainer .right-side {padding-right: 10px;}
+}
+@media only screen and (min-width: 340px) and (max-width: 374px) {
+#document.skn-trz2.pagesize {width: 528px!important;}}
+@media only screen and (min-width: 320px) and (max-width: 339px) {
+.page-finalize #document{transform: scale(0.460);transform-origin: top left;width: 630px!important;}
+#document.skn-trz2.pagesize {width: 532px!important;}
+.resume-thumbnail .resume-preview {width: 71%!important;}}
+@media only screen and (min-width: 340px) and (max-width: 400px) {
+.page-finalize #document{transform: scale(0.55);transform-origin: top left;width: 630px!important;}
+.resume-thumbnail .resume-preview {width: 68%!important;}}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+.page-finalize #document{transform: scale(0.60);transform-origin: top left;width: 630px!important;}
+.resume-thumbnail .resume-preview {width: 44%!important;}}
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+.resume-thumbnail .resume-preview {width: 44%!important;}}
+@media only screen and (min-width: 701px) and (max-width: 767px) {
+.resume-thumbnail .resume-preview {width: 45%!important;}}
+@media only screen and (min-width: 768px) and (max-width: 962px) {
+.col-md-5.col-lg-4.col-xl-4.resume-thumbnail {max-width: 100%!important;position:
+relative;left: 5%;}
+.resume-thumbnail .resume-preview {width: 39%!important;}}
+/*** For Preview section ***/
+.enable-preview .resume-preview.thumb-preview.resume-animation{position: fixed;top: 20%;left: 31%;margin-top: -50px;margin-left: -50px;width: 43%;height: 640px;}
+.enable-preview .resume-animation div#document {transform: scale(1);}
+.enable-preview .fa-remove:before, .fa-close:before, .fa-times:before {content: "\f00d";background: white;font-size: 14px;padding: 6px 7px;border-radius: 41px;}
+.enable-preview .disable-preview {position: fixed; top: 100px}
+.skills-before.enable-preview .disable-previews {top:100px !important}
+.work-history-before.enable-preview .disable-previews {/* right: 33.5%!important */}
+.education-detail-before.enable-preview .disable-previews {
+    top: 100px;
+}
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation{width: 45%!important;top: 23%;   height: 525px;} 
+.enable-preview .disable-previews {top: 100px!important;right: 26.5%!important;/* top: -86px!important;right: 25.5%!important; */}
+.work-history-before.enable-preview .disable-previews {/* right: 32%!important;top: calc(0% - 94px)!important; */}
+.skills-before.enable-preview .disable-previews {
+    /* top: calc(0% - 43px)!important;
+    right: 26%!important; */
+}}
+@media only screen and (min-width: 1150px) and (max-width: 1299px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation{width: 48%!important;
+left: 23%;height: 560px;top: 25%;}
+.enable-preview .disable-previews {top: 17%!important;right: 31.5%!important;}
+.work-history-before.enable-preview .disable-previews {/* right: 19.5%!important */}}
+@media only screen and (min-width: 963px) and (max-width: 1149px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {top: 25%;left: 25%;
+width: 61%;height: 560px;}  
+.enable-preview .disable-previews {top: 15%!important;right: 17.5%!important;}
+.work-history-before.enable-preview .disable-previews {right: 18.5%!important}}
+@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 38.5%;left:32%;}
+.enable-preview .disable-previews {top: 100px!important;}
+.work-history-before.enable-preview .disable-previews {/*right: 36.5%!important*/}}
+@media only screen and (min-width: 1701px) and (max-width: 2000px) {
+/* .enable-preview .resume-preview.thumb-preview.resume-animation {width: 32.2%;left:35%;} */
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 31.4%;left:35%;}
+.enable-preview .disable-previews {top: 100px!important;}
+.skills-before.enable-preview .disable-previews {
+    top: calc(0% - 0px)!important;
+    right: 34.5%!important;
+}
+.work-history-before.enable-preview .disable-previews {right: 39%!important}}
+@media only screen and (min-width: 2001px)  {/*and (max-width: 2600px)*/
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 23%;left:38%;}
+.enable-preview .disable-preview {top: 177px!important;right: 40.5%!important;}
+.work-history-before.enable-preview .disable-previews {right: 51.5%!important}}
+
+@media only screen and (max-width: 767px) {
+.enable-preview .resume-animation div#document {transform: scale(0.65);}
+.enable-preview .resume-preview.thumb-preview.resume-animation {left: 14%;width: 96%!important;height: 550px;}
+.enable-preview .disable-preview {top: 90px!important;right: 0%!important;z-index: 99;position:fixed;}}
+
+@media only screen and (min-width: 320px) and (max-width: 339px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {left: 19%;width: 94%!important;top: 21%;height: 468px;}
+.enable-preview .disable-preview {top: 67px!important;}
+.enable-preview .resume-animation div#document {transform: scale(0.50);}}
+@media only screen and (min-width: 340px) and (max-width: 374px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {left: 15.5%!important;}
+.enable-preview .disable-preview {top: 78px!important;}
+enable-preview .resume-animation div#document {transform: scale(0.65);}}
+@media only screen and (min-width: 375px) and (max-width: 400px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {left: 15.5%!important;}
+.enable-preview .disable-preview {top: 78px!important;}
+.enable-preview .resume-animation div#document {transform: scale(0.6);}}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 70%!important;margin: 0 auto;top: 22%;left:14%;}	
+.enable-preview .disable-preview {top: 68px!important;right: 15%!important;}}
+@media only screen and (min-width: 600px) and (max-width: 650px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 62%!important;margin: 0 auto;top: 22%;left:19%;}	
+.enable-preview .disable-preview {top: 73px!important;right: 18%!important;}}
+@media only screen and (min-width: 651px) and (max-width: 700px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 59%!important;margin: 0 auto;top: 22%;left:21%;}	
+.enable-preview .disable-preview {top: 78px!important;right: 18%!important;}}
+@media only screen and (min-width: 701px) and (max-width: 767px) {
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 54%!important;margin: 0 auto;top: 17%;left: 27%;}	
+.enable-preview .disable-preview {top: 68px!important;right: 17%!important;}}
+@media only screen and (min-width: 768px) and (max-width: 962px) {
+.enable-preview .disable-preview {top: 97px!important;right: 1%!important;;z-index: 99;position: fixed;}
+.enable-preview .resume-preview.thumb-preview.resume-animation {width: 95%!important;left: 9%;height: 830px;top: 15%;}
+.enable-preview .resume-animation div#document {transform: scale(1.2);}}
+
+@media only screen and (min-width: 1024px){
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {background: #f1f1f1; }
+::-webkit-scrollbar-thumb {background: #00428a; }
+::-webkit-scrollbar-thumb:hover {background: #555; }}
+
+/********/
+@media only screen and (min-width: 1200px){
+.work-history-before{
+	padding:85px!important;
+}
+}
+@media only screen and (min-width: 1920px){
+	#main.enable-preview .disable-previews{
+		top: 15% !important;
+		right: 36% !important;
+	}
+}
+
+/*mohit*/
+#document{
+	overflow:scroll;
+}
+

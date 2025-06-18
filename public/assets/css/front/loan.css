@@ -1,0 +1,181 @@
+body#body {
+    background: #fff !important;
+}
+
+section.banner_section {
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+}
+
+.banner_caption {
+    position: absolute;
+    color: #f2f2f2;
+    top: 40px;
+    left: 30px;
+    width: 875px;
+}
+.cap_heading {
+    font-size: 48px;
+    font-weight: bold;
+	letter-spacing: 1.5px;
+}
+.cap_desc {
+    font-size: 20px;
+    width: 555px;
+    padding-top: 10px;
+    line-height: 30px;
+}
+.cap_btn a {
+    background: #FF5C5C;
+    color: #f2f2f2;
+    padding: 11px 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.cap_points {
+    width: 100%;
+    float: left;
+	margin-bottom: 30px;
+}
+ul.fli, ul.sli {
+    padding: 0px;
+    list-style-type: none;
+    float: left;
+}
+ul.fli {
+    width: 330px;
+}
+ul.sli {
+    width: 425px;
+}
+ul.fli li, ul.sli li {
+    font-size: 16px;
+    padding: 20px 0px 0px;
+}
+section.bloan_disclosure_wrap {
+    background: #f8f8f8;
+    margin-top: -140px;
+    position: relative;
+    padding: 30px 20px;
+}
+.hiw_section, .htq_section, .testimonials_section {
+    text-align: center;
+    padding: 50px 20px 40px;
+    position: relative;
+    background-color: #fff;
+}
+.section_heading {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section.hiw_section img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+.step_btn {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: 0.6px;
+    color: #fff;
+    background-color: #379fb8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.hiw_section p {
+    font-size: 16px;
+    text-align: center;
+    color: #414141;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.with_border:after {
+    content: "";
+    background: url(http://test.vastedge.com/multistep/wp-content/uploads/2018/12/line-desktop_lg.png);
+    width: 235px;
+    height: 2px;
+    display: block;
+    background-size: contain;
+    top: 35px;
+    position: absolute;
+    left: 235px;
+}
+.q_opt {
+    text-align: center;
+    font-size: 17.5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.q_desc {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.htq_section img {
+    max-height: 130px !important;
+}
+section.hiw_section {
+    border-bottom: 1px solid #dbdadf;
+}
+section.apply_is_easy {
+    background: #f1f1f1;
+    padding: 60px 0px;
+    text-align: center;
+}
+.head_txt {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.apply_btn a {
+    background: #FF5C5C;
+    color: #fff;
+    padding: 7px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.apply_btn {
+    margin-top: 15px;
+}
+section.testimonials_section .row {
+    margin-bottom: 20px;
+}
+.rev_txt {
+    padding-left: 0px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+}
+.rev_rating {color: #ecdc17;}
+.rev_auth {font-weight: bold;}
+
+.cap_desc.personal {font-size: 19px;width: auto;font-weight: 500;}
+/* .cap_points.personal li {font-size: 16px;} */
+/* .cap_points.personal ul.fli {width: 330px;} */
+.select_dropdown {background: #ffffff;border: 1px solid #dbdadf;border-radius: 4px;height: 42px;color: #636363;width: 330px;padding-left: 10px;font-size: 15px;}
+.cap_btn.personal a {padding: 13px 26px;font-weight: 600;/*margin-left: 10px;*/letter-spacing: 1.2px;}
+.cap_btn.personal a i {font-size: 15px;padding-left: 5px;}
+.hiw_section p.work_text {padding: 0px 2px;}
+div#myNavbar {background: #fff;}
+
+
+@media screen and (min-width:768px) and (max-width:1024px){
+	section.navigation .container .col-md-3 .site-logo img.img-responsive {margin-left: 0px !important;}
+}
+
+@media screen and (max-width:767px){
+	nav#mobile_menu button.btn.header_signup {display: none;}
+}
