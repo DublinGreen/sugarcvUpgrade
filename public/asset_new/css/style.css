@@ -2643,6 +2643,7 @@ span.color-selector-radio {
 .color-selector-reset .color-selector-radio:after {
     width: 30px;
     height: 1px;
+    
     border-top: 1px solid #CFD5D9;
     -moz-transform: rotate(30deg);
     -o-transform: rotate(30deg);
