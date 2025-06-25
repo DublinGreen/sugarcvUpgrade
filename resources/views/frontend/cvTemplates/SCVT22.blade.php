@@ -197,7 +197,7 @@
          <!-- <div class="top1"><img src="https://www.sugarcv.com/templates_images/scvt22/scvt22top.jpg" width="100%" height="100%"></div> -->
 		 <div class="topsections" style="margin-bottom:20px;z-index: 2 !important;">
 		 <!-- <div class="shape scvt"></div> -->
-       <img src="https://www.sugarcv.com/templates_images/scvt22/scvt22top.jpg" width="100%" height="170px">
+       <img src="{{ url('/templates_images/scvt22/scvt22top.jpg') }}" width="100%" height="170px">
 			<div class="inner editcontent " dhref="@if(isset($resume->id)) {{ route('edit-resume',['id' => $resume->id]) }} @endif" style="margin-top:{{isset($pdf_view)?'-135px':'-133px'}};">
 				<div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling  data-NAME">
                   <div class="document-tool sec-tool" id="editIcons" style="right: -22px;"></div>

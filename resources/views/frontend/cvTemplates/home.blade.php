@@ -17,7 +17,7 @@
         <h2>Make a Premium<br>CV or Resume Online,<br><span>Quick & Easy</span></h2>
         <div>
           <a href="#about" class="btn-get-started scrollto">My Account</a>
-          <a href="https://sugarcv.com/cv-template" class="btn-services scrollto">Select Template</a>
+          <a href="{{ url('/cv-template') }}" class="btn-services scrollto">Select Template</a>
         </div>
       </div>
 
@@ -189,7 +189,7 @@
             </p>
 			<br>
 		<p>Get our premium CV template so you can stand out and impress recruiters. Choose from our many CV templates <br><h6>We have 20+ Templates you can choose from.</h6></p>
-			<a href="https://sugarcv.com/cv-template" class="btn btn-danger">View Templates</a></left><br><br><br>
+			<a href="{{ url('/cv-template') }}" class="btn btn-danger">View Templates</a></left><br><br><br>
           </div>
           <div class="col-lg-6 wow fadeInUp">
             <img src="{{ url('asset_new/img/services/scvt15.jpg')}}" class="img-fluid" alt="">
@@ -353,7 +353,7 @@
 		<div class="row">
 		<div class="col-md-4"></div>
 		<div class="col-md-4"><center ! important>
-		<a href="https://sugarcv.com/cv-template" class="btn btn-danger">Select a Template Now</a></center>
+		<a href="{{ url('/cv-template') }}" class="btn btn-danger">Select a Template Now</a></center>
 		 
 		</div>
 		</div>
