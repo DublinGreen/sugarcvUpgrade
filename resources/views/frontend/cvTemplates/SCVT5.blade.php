@@ -225,8 +225,8 @@
                               <div id="PARAGRAPH_NAME_f7eda8ec-b653-4afd-af6e-42abfa260097" class="paragraph PARAGRAPH_NAME firstparagraph  ">
                                  <div>
                                     <div class="name word-break" style="font-family: -webkit-pictograph;font-weight: 500;padding-left: 10px;">
-                                       <span class="field" id="FIELD_FNAM" >{{ $resume->first_name or 'Your'}}</span><br>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM" >{{ $resume->first_name ?? 'Your'}}</span><br>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
 
                                  </div>
@@ -247,9 +247,9 @@
                               <div id="PARAGRAPH_NAME_f7eda8ec-b653-4afd-af6e-42abfa260097" class="paragraph PARAGRAPH_NAME firstparagraph  ">
                                  <div class="top-space">
                                     {{-- <b> --}}
-                                       <div class="" style="border-bottom: 10px solid #307c7b;font-size: 14px;line-height: 24px;font-weight: bold;text-transform: uppercase;" id="">{{ $resume->profession or '' }}</div>
+                                       <div class="" style="border-bottom: 10px solid #307c7b;font-size: 14px;line-height: 24px;font-weight: bold;text-transform: uppercase;" id="">{{ $resume->profession ?? '' }}</div>
                                     {{-- </b> --}}
-                                       {{-- <div class="resumeTitle " id="FIELD_DCTL">{{ $resume->profession or '' }}</div></b> --}}
+                                       {{-- <div class="resumeTitle " id="FIELD_DCTL">{{ $resume->profession ?? '' }}</div></b> --}}
 
                                  </div>
                               </div>
@@ -297,10 +297,10 @@
 												 <b> A :</b>
 												</span>
 
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
 
                                           </div>
 										  <div dependency="HPHN">
@@ -308,13 +308,13 @@
 											<b> M :</b>
 											</span>
 
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break">
 										  <span class="fa-stack fa-lg ">
 											 <b> E :</b>
 											</span>
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
 
 
@@ -546,17 +546,17 @@
 									   @endif
 										<ul style="margin-top:5px;">
                                     <li><b>State of Origin:</b>
-												 <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</span>
+												 <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</span>
 												 </li>
 												 <li><b>Date of Birth:</b>
-												 <span class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</span>
+												 <span class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</span>
 												 </li>
 
 												 <li><b>Gender:</b>
-												 <span class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</span>
+												 <span class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</span>
 												 </li>
 												 <li><b>Marital Status:</b>
-												 <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</span>
+												 <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</span>
 												 </li>
 
 

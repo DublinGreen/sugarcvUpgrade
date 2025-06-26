@@ -75,11 +75,11 @@
 		   #document.skn-srz1 .paragraph.datespara:after{content:'';display:{{isset($pdf_view)?'':'table'}};clear:both}
 		</style>
 		<style type="text/css" id="dynamic" data-time="Wed Feb 12 2020 13:14:27 GMT+0530 (India Standard Time)">
-		   #document.skn-srz1,#document.skn-srz1 table{line-height:{{ $resume->lineSpacing or '18px'}}}
+		   #document.skn-srz1,#document.skn-srz1 table{line-height:{{ $resume->lineSpacing ?? '18px'}}}
 		   #document.skn-srz1.pagesize{width:{{isset($pdf_view)?'100%;display:table;':'635px'}}}
 		   #document.skn-srz1 .parentContainer{ {{isset($pdf_view)?'display:table-row;':''}} }
-		   #document.skn-srz1.fontface{font-family:{{ $resume->fontFamily or 'Century Gothic'}}}
-		   #document.skn-srz1.fontsize{font-size:{{ $resume->fontSize or '11px'}}}
+		   #document.skn-srz1.fontface{font-family:{{ $resume->fontFamily ?? 'Century Gothic'}}}
+		   #document.skn-srz1.fontsize{font-size:{{ $resume->fontSize ?? '11px'}}}
 		   #document.skn-srz1 .section{padding-top:20px}
 		   #document.skn-srz1 .firstparagraph{margin-top:0!important}
 		   #document.skn-srz1 .paragraph{margin-top:10px;}
@@ -188,11 +188,11 @@
 							 <div id="PARAGRAPH_NAME_3a9b9ad7-cb8d-4504-9153-35a7463e07ab" class="paragraph PARAGRAPH_NAME firstparagraph scvt">
 								<div>
 								   <div class="name word-break" style="border-bottom:2px solid #686868">
-									  <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-									  <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+									  <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+									  <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
 									 
 								   </div>
-								   <div class="resumeTitle" id="FIELD_DCTL">{{ $resume->profession or 'Designer' }}</div>
+								   <div class="resumeTitle" id="FIELD_DCTL">{{ $resume->profession ?? 'Designer' }}</div>
 								</div>
 							 </div>
 						  </div>
@@ -218,18 +218,18 @@
 										 
 										 <div class="txtBold mt5">Phone </div>
 										 <div dependency="HPHN">
-											<span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+											<span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
 										 </div>
 										 <div class="txtBold mt5" dependency="EMAI">E-mail </div>
 										 <div dependency="EMAI" class="word-break">
-											<span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@example.com' }}</span>
+											<span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@example.com' }}</span>
 										 </div>
 										 <div dependency="STRT|CITY|STAT|ZIPC">
 											<div class="txtBold">Address </div>
-											<div class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</div>
-											<span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span>,</span>
-											<span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span >, </span>
-											<span class="field" id="FIELD_ZIPC">{{ $resume->state or '95814'}}</span>
+											<div class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</div>
+											<span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span>,</span>
+											<span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span >, </span>
+											<span class="field" id="FIELD_ZIPC">{{ $resume->state ?? '95814'}}</span>
 										 </div>
 									  </div>
 								   </div>
@@ -249,20 +249,20 @@
 							<div class="biodata" style="text-align:center;">	
 							<div dependency="ORIGINSTATE">
 								<div><b>State of Origin:</b></div>
-								<div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+								<div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
 							</div>
 							
 							<div dependency="MARITALSTATUS">
 								<div><b>Marital Status:</b></div>
-								<div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+								<div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
 							</div>
 							<div dependency="GENDER">
 								<div><b>Gender:</b></div>
-								<div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+								<div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
 							</div>
 							<div dependency="DOB">
 								<div><b>Date of Birth:</b></div>
-								<div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div>
+								<div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div>
 							</div>
 						</div>
 					</div>		

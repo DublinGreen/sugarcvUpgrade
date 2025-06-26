@@ -3,7 +3,7 @@
 <div class="resume-preview thumb-preview resume-animation">
 <div class="">
 <div>
-   <style type="text/css" id="static">
+   <style type="text/css" id="static"> or 
    #backgroundInactive{
                display:none;
             }
@@ -245,10 +245,10 @@
                      <div class="">
                         <div class="">
                            <div class="name word-break" style="text-transform:uppercase">
-                              <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                              <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                              <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                              <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                            </div>
-                           <div class="resumeTitle " id="FIELD_DCTL" style="text-transform:uppercase">{{ $resume->profession or '' }}</div>
+                           <div class="resumeTitle " id="FIELD_DCTL" style="text-transform:uppercase">{{ $resume->profession ?? '' }}</div>
                            <span style="float: left;border-bottom: 4px solid;width: 27px;height: 20px;"></span>
                         </div>
                      </div>
@@ -334,19 +334,19 @@
                   <div class="singlecolumn" style="text-align:right;margin-right:2px;">
                      <div dependency="ORIGINSTATE">
                         <div><b>State of Origin</b></div>
-                        <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+                        <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
                      </div>
                      <div dependency="DOB">
                         <div><b>Date of Birth</b></div>
-                        <div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div>
+                        <div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div>
                      </div>
                      <div dependency="MARITALSTATUS">
                         <div><b>Marital Status</b></div>
-                        <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+                        <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
                      </div>
                      <div dependency="GENDER">
                         <div><b>Gender</b></div>
-                        <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+                        <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
                      </div>
                      <p>&nbsp;</p>
                   </div>
@@ -398,10 +398,10 @@
                                              <img src="{{ url('templates_images/scvt6/location.jpg')}}" width="23px">
                                    </span>
                                           <span style="display: inline-block;width:78%;vertical-align:top; @if(isset($pdf_view)) margin-top:-10px; @endif">
-                                             <span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+                                             <span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
                                    </span>
                                        </div>
                                        <div dependency="HPHN" style="width: 90%;">
@@ -412,7 +412,7 @@
                                              
                                            </span>
                                           <span @if(isset($pdf_view)) style="display: inline-block;margin-top:-6px;" @endif>
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </span>
                                        </div>
                                        <div dependency="EMAI" class="word-break" style="width: 90%;{{ isset($pdf_view)?'padding-bottom:5px;margin-bottom:7px;':''}}">
@@ -423,7 +423,7 @@
 
                                    </span>
                                           <span style="display: inline-block; @if(isset($pdf_view)) margin-top:2px;vertical-align:top; @else margin-top:3px; @endif width:78%;">
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                    </span>
                                        </div>
                                        @if( !empty($resume->facebook) )

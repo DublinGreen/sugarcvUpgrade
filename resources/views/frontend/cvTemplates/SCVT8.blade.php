@@ -159,10 +159,10 @@
                         <div class="">
                            <div class="">
 						   <div class="name word-break">
-                                       <span class="field " id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span><br>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field " id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span><br>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-                              <div class="resumeTitle " style="color:#fff;background-color:#383735;padding:10px 0px 10px 2px;text-transform:uppercase;{{isset($pdf_view)?'':'margin-left:-5px;'}}" id="FIELD_DCTL">{{ $resume->profession or '' }}</div> 
+                              <div class="resumeTitle " style="color:#fff;background-color:#383735;padding:10px 0px 10px 2px;text-transform:uppercase;{{isset($pdf_view)?'':'margin-left:-5px;'}}" id="FIELD_DCTL">{{ $resume->profession ?? '' }}</div> 
                            </div>
                         </div>
                      </div>
@@ -321,20 +321,20 @@
                         </div>
 								  <div class="biodata" style="padding-left:0px;">	
 								   <div dependency="GENDER">
-									 <div><b>Gender </b> <span class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</span></div>
-									 <!-- <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div> -->
+									 <div><b>Gender </b> <span class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</span></div>
+									 <!-- <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div> -->
 								  </div>
 								  <div dependency="MARITALSTATUS">
-									 <div><b>Marital Status </b><span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</span></div>
-									 <!-- <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div> -->
+									 <div><b>Marital Status </b><span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</span></div>
+									 <!-- <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div> -->
 								  </div>
 								  <div dependency="DOB">
-									 <div><b>Date of Birth </b><span class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</span></div>
-									 <!-- <div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div> -->
+									 <div><b>Date of Birth </b><span class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</span></div>
+									 <!-- <div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div> -->
 								  </div>
 								  <div dependency="ORIGINSTATE">
-									 <div><b>State of Origin </b><span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</span></div>
-									 <!-- <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div> -->
+									 <div><b>State of Origin </b><span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</span></div>
+									 <!-- <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div> -->
 								  </div>
 								</div>	   
                                  </div>
@@ -369,7 +369,7 @@
                                                             <img src="{{asset('templates_images/scvt8/phone.jpeg')}}" style="width:1.5rem;height:1.5rem;border-top-left-radius: 12px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;{{isset($pdf_view)?'margin-top:7px;':''}}" alt="">
                                                             </span>
                                                 
-                                                            <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                                            <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                                 </div>
                                              <div dependency="EMAI" class="word-break" style="width: 100%;">
                                                          <span class="fa-stack fa-lg sectiontitle-li" style="vertical-align: top;margin-top: 5px;width: 15%;max-width: 2rem;display: inline-block;">
@@ -377,7 +377,7 @@
                                                             <i class="fa fa-envelope-o fa-stack-1x "></i> -->
                                                             <img src="{{asset('templates_images/scvt8/mail.jpeg')}}" style="width:1.5rem;height:1.5rem;border-top-left-radius: 13px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;{{isset($pdf_view)?'margin-top:8px;':''}}" alt="">
                                                             </span>
-                                                            <span class="field" id="FIELD_EMAI" style="width: 80%;display: inline-block;{{isset($pdf_view)?'padding-left: 0px;vertical-align:middle;margin-top:5px;':'padding-left: 8px;'}}">{{ $resume->email or 'example@gmail.com' }}</span>
+                                                            <span class="field" id="FIELD_EMAI" style="width: 80%;display: inline-block;{{isset($pdf_view)?'padding-left: 0px;vertical-align:middle;margin-top:5px;':'padding-left: 8px;'}}">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                                 </div>
                                                 <div dependency="STRT|CITY|STAT|ZIPC" style="width:100%;">
                                                                <span class="fa-stack fa-lg sectiontitle-li" style="vertical-align: top;margin-top: 5px;width: 15%;max-width: 2rem;display: inline-block;">
@@ -386,10 +386,10 @@
                                                                <img src="{{asset('templates_images/scvt8/location.jpeg')}}" style="width:1.5rem;height:1.5rem;border-top-left-radius: 13px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 12px;{{isset($pdf_view)?'margin-top:8px;':''}}" alt="">
                                                                </span>
                                                                <span style="width: 80%;display: inline-block;{{isset($pdf_view)?'padding-left: 0px;margin-top:8px':'padding-left: 8px;'}}">
-                                                                        <span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                                                        <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                                                        <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                                                        <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+                                                                        <span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                                                        <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                                                        <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                                                        <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
                                                                </span>
                                                          </div>
 

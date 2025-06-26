@@ -282,9 +282,9 @@
 												<img src="{{ url('images/shapeImages/location2.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
 											<span style="width: 80%;display: inline-block;position: relative;">
-											 <span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+											 <span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
 											</span>
                                           </div>
 										  <div dependency="HPHN">
@@ -292,13 +292,13 @@
 											  <img src="{{ url('images/shapeImages/phone2.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
 
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break">
 										  <span class="fa-stack fa-lg sectiontitle-li" style="display: inline;">
 											  <img src="{{ url('images/shapeImages/email2.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div-->
 											<ul>
 												<li class="SOILI" style="list-style: none;border: 1px solid;padding: 0px 0 0 0;margin: 0;border-right: none;">
@@ -311,20 +311,20 @@
                    </div><div class="address" >
 
                       @endif
-													<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-													<span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-													<span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-													<span class="field" id="FIELD_ZIPC">{{ $resume->zip or '' }}</span>
+													<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+													<span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+													<span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+													<span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '' }}</span>
 													</div>
 												</li>
 												<li class="SOILI" style="list-style: none;border: 1px solid;padding: 0px 0 0 0;margin: 0;border-bottom: none;border-top: none; border-right: none;">
 													
                                     <img class="IMGSOC" src="{{ url('images/shapeImages/phone2.png')}}" style="display: inline-block;vertical-align: middle;margin-top: 0;width: 32px;margin-right: 5px;">
-													<span class="field"  id="FIELD_HPHN" style="display: inline-block;vertical-align: middle;">{{ $resume->phone or '916-948-7196' }}</span>
+													<span class="field"  id="FIELD_HPHN" style="display: inline-block;vertical-align: middle;">{{ $resume->phone ?? '916-948-7196' }}</span>
 												</li>
 												<li class="SOILI" style="list-style: none;border: 1px solid;padding: 0px 0 0 0;margin: 0;border-right: none;">
 													<img class="IMGSOC" src="{{ url('images/shapeImages/email2.png')}}" style="display: inline-block;vertical-align: middle;margin-top: 0;width: 32px;margin-right: 5px;">
-													<span class="field" id="FIELD_EMAI" style="display: inline-block;vertical-align: middle;">{{ $resume->email or 'example@gmail.com' }}</span>
+													<span class="field" id="FIELD_EMAI" style="display: inline-block;vertical-align: middle;">{{ $resume->email ?? 'example@gmail.com' }}</span>
 												</li>
 
 												@if(!empty($resume->linkedin))
@@ -494,18 +494,18 @@
                                           </div>
                                           <div dependency="ORIGINSTATE">
 											 <div><b>State of Origin:</b>
-                                             <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</span>
+                                             <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</span>
 											 </div>
                                           </div>
 										  <div dependency="MARITALSTATUS">
 											 <div><b>Marital Status:</b>
-                                             <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</span>
+                                             <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</span>
 											 </div>
                                           </div>
 
 										  <div dependency="GENDER">
 											 <div><b>Gender:</b>
-                                             <span class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</span>
+                                             <span class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</span>
 											 </div>
                                           </div>
 
@@ -526,12 +526,12 @@
 			 <!--old css<div class="centered" style="position: absolute;top: 60px;left: 54%;width: 279px;transform:translate(-50%,-50%);clear:both"> adding new below on 29 sep 21-->
 			 <div class="centered" style="position: absolute;top: 60px;left: {{isset($pdf_view)?'37%':'42%'}};width: 100%;transform:translate(-50%,-50%);clear:both">
 										<div class="name word-break" style='color:{{isset($resume->color)? $resume->color:"#fff"}};font-size:{{isset($resume->nameSize)? $resume->nameSize:"25px"}};line-height:40px;text-align: left;width:100%;    padding-left: {{isset($pdf_view)?'0px':'30px'}};'>
-                                       <span class="field" id="FIELD_FNAM" style="text-transform:uppercase">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM" style="text-transform:uppercase">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM" style="text-transform:uppercase">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM" style="text-transform:uppercase">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div></div>
 									<div class="centered tmargin" style="position: absolute;top: 115px;left:{{isset($pdf_view)?'36%':'42%'}};width: 279px;transform:translate(-50%,-50%);clear:both">
 										<div class="name word-break" id="sizere" style='color:{{isset($resume->color)? $resume->color:"#002e58"}};font-size:{{isset($resume->nameSize)? $resume->nameSize:"18px"}};line-height:60px'>
-                                       <span class="resumeTitle main" id="FIELD_DCTL" style="color:#fff;font-size:15px;text-transform:uppercase">{{ $resume->profession or '' }}</span>
+                                       <span class="resumeTitle main" id="FIELD_DCTL" style="color:#fff;font-size:15px;text-transform:uppercase">{{ $resume->profession ?? '' }}</span>
                                     </div></div>
 			<img class="IMGSOC" src="{{asset('templates_images/scvt4/righttop.jpeg')}}" alt="Snow" id="righttopimg">
 

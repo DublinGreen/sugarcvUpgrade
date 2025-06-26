@@ -192,10 +192,10 @@
                               <div id="PARAGRAPH_NAME_30df97fd-1385-4d98-9319-6ebe01086fa2" class="paragraph PARAGRAPH_NAME firstparagraph">
                                  <div>
                                     <div class="name word-break">
-									  <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-									  <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+									  <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+									  <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-                                    <div class="resumeTitles" id="FIELD_DCTL">{{ $resume->profession or '' }}</div>
+                                    <div class="resumeTitles" id="FIELD_DCTL">{{ $resume->profession ?? '' }}</div>
                                  </div>
                               </div>
                            </div>
@@ -216,16 +216,16 @@
                                     <div class="scvt1 address">
                                        <div class="singlecolumn">
                                           <div dependency="HPHN">
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
                                           <div dependency="EMAI" class="word-break">
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
                                           <div dependency="STRT|CITY|STAT|ZIPC">
-											<div class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</div>
-											<span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span>,</span>
-											<span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span >, </span>
-											<span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<div class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</div>
+											<span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span>,</span>
+											<span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span >, </span>
+											<span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
                                           </div>
                                        </div>
                                     </div>
@@ -315,19 +315,19 @@
                                        <div class="singlecolumn" >
                                           <div dependency="ORIGINSTATE">
 											 <div style="font-size:13px;"><b>State of Origin</b></div>
-                                             <div class="field" id="FIELD_ORIGINSTATE"style="">{{ $resume->originState or 'Lagos' }}</div>
+                                             <div class="field" id="FIELD_ORIGINSTATE"style="">{{ $resume->originState ?? 'Lagos' }}</div>
                                           </div>
 										  <div dependency="MARITALSTATUS">
 											 <div style= "font-size:13px;"><b>Marital Status</b></div>
-                                             <div class="field" id="FIELD_MARITALSTATUS" style="">{{ $resume->maritalStatus or 'Single' }}</div>
+                                             <div class="field" id="FIELD_MARITALSTATUS" style="">{{ $resume->maritalStatus ?? 'Single' }}</div>
                                           </div>
 										  <div dependency="DOB">
 											 <div style="font-size:13px;"><b>Date of Birth</b></div>
-                                             <div class="field" id="FIELD_DOB" style="">{{ $resume->dob or date('d-m-Y') }}</div>
+                                             <div class="field" id="FIELD_DOB" style="">{{ $resume->dob ?? date('d-m-Y') }}</div>
                                           </div>
 										  <div dependency="GENDER">
 											 <div style="font-size:13px;"><b>Gender</b></div>
-                                             <div class="field" id="FIELD_GENDER" style="">{{ $resume->gender or 'Male' }}</div>
+                                             <div class="field" id="FIELD_GENDER" style="">{{ $resume->gender ?? 'Male' }}</div>
                                           </div>
 
                                        </div>

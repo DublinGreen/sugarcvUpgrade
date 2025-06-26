@@ -191,8 +191,8 @@
                               <div id="PARAGRAPH_NAME_f7eda8ec-b653-4afd-af6e-42abfa260097" class="paragraph PARAGRAPH_NAME firstparagraph  ">
                                  <div>
                                     <div class="name word-break editcontent " dhref="@if(isset($resume->id)) {{ route('edit-resume',['id' => $resume->id]) }} @endif" style='color:{{isset($resume->color)? $resume->color:"#fff"}};font-size:{{isset($resume->nameSize)? $resume->nameSize:"28px"}};line-height:40px;float:left;text-align:left;margin-left:20px;margin-top:{{isset($pdf_view)?'35px;':'35px;'}}'>
-                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM" style="text-transform:capitalize;">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM" style="text-transform:capitalize;">{{ $resume->last_name ?? 'Name'}}</span>
 									   
                                     </div>
                                     
@@ -205,7 +205,7 @@
                </div>
 			</div>
 			<div class="topright editcontent " dhref="@if(isset($resume->id)) {{ route('edit-resume',['id' => $resume->id]) }} @endif" style="width: 60%;">
-			<div class=" "><div class="resumeTitle main" id="FIELD_DCTL" style="font-size:20px;line-height:16px; padding-top:25px;color:{{isset($resume->color)? $resume->color:"#fff"}};float:left;margin-left:75px;margin-top:25px;">{{ $resume->profession or 'Computer Programmer' }}</div> </div>
+			<div class=" "><div class="resumeTitle main" id="FIELD_DCTL" style="font-size:20px;line-height:16px; padding-top:25px;color:{{isset($resume->color)? $resume->color:"#fff"}};float:left;margin-left:75px;margin-top:25px;">{{ $resume->profession ?? 'Computer Programmer' }}</div> </div>
 			<img class="header_image" src="{{ url('images/shapeImages/scvt16_diagonal_lines.jpg') }}" style="float:right;clear:both;">
 				<!--div style="position: relative;">
 				   
@@ -239,20 +239,20 @@
                                        <div class="singlecolumn">
 									   <div dependency="STRT|CITY|STAT|ZIPC">
 									   		<h6 style="color:#000;font-weight:bold;font-size:{{isset($resume->fontSize)? $resume->fontSize:'12px'}}">Address:</h6>
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
 											
                                           </div>
 										  <div dependency="HPHN" style="margin-top:7px;">
 										 
 											<h6 style="color:#000;font-weight:bold;font-size:{{isset($resume->fontSize)? $resume->fontSize:'12px'}}">Phone:</h6>
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break" style="margin-top:7px;">
 										  <h6 style="color:#000;font-weight:bold;font-size:{{isset($resume->fontSize)? $resume->fontSize:'12px'}}">E-mail:</h6>
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
 
 
@@ -277,20 +277,20 @@
 						<div class="biodata" style="">	
 						  <div dependency="MARITALSTATUS">
 							 <div><b>Marital Status</b></div>
-							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
 						  </div>
 						  <div dependency="DOB">
 							 <div><b>Date of Birth</b></div>
-							 <div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div>
+							 <div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div>
 						  </div>
 						   <div dependency="GENDER">
 							 <div><b>Gender</b></div>
-							 <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+							 <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
 						  </div>
 						 
 						  <div dependency="ORIGINSTATE">
 							 <div><b>State of Origin</b></div>
-							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
 						  </div>
 						</div>
 			   

@@ -186,8 +186,8 @@
                         <div class="">
                            <div class="">
 						   <div class="name word-break">
-                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
                               </div>
 						   
@@ -260,14 +260,14 @@
 			<div id="CONTAINER_3" class="right-box" style="/* margin-left: 37% !important; */width: 62% !important;/* margin-right: 30px; */display: table-cell;vertical-align: top;">
 			
 			               
-             <!--  <div class="resumeTitle " id="FIELD_DCTL" style="border-bottom:1px solid #E23C00;color:#E23C00;position:relative!important;left:0px!important;top: 0px!important;line-height: 12px;padding-bottom: 14px;padding-left:30px">{{$resume->profession or 'Graphic Designer'}}</div>-->
+             <!--  <div class="resumeTitle " id="FIELD_DCTL" style="border-bottom:1px solid #E23C00;color:#E23C00;position:relative!important;left:0px!important;top: 0px!important;line-height: 12px;padding-bottom: 14px;padding-left:30px">{{$resume->profession ?? 'Graphic Designer'}}</div>-->
 											
 										  <div data-react-beautiful-dnd-draggable="1" class="  section-container SortableItem-sibling  data-HILT">
                   <div class="document-tool sec-tool" id="editIcons" style="right:22px;"></div>
                   <div id="SECTION_HILT78287197-6649-4595-8d7a-51b01fd1ff77" class=" SECTION_HILT  noparagraph " data-section-cd="HILT">
 				  <div class=" doc-item editcontent " dhref=" @if(isset($resume->id)) {{ route('edit-resume',['id' => $resume->id]) }} @endif">
               <div class="heading"  style="">
-                           <div class="sectiontitle" id="SECTIONNAME_HILT" style="border-bottom:1px solid #E23C00;color:#E23C00;font-weight: 600;font-size:30px;">{{$resume->profession or 'Graphic Designer'}}<span class="inner-action"><a href="@if(isset($resume->id))  {{ route('edit-resume',['id' => $resume->id]) }} @endif" class="edit-section"><i class="fa fa-pencil"></i></a> </span></div>
+                           <div class="sectiontitle" id="SECTIONNAME_HILT" style="border-bottom:1px solid #E23C00;color:#E23C00;font-weight: 600;font-size:30px;">{{$resume->profession ?? 'Graphic Designer'}}<span class="inner-action"><a href="@if(isset($resume->id))  {{ route('edit-resume',['id' => $resume->id]) }} @endif" class="edit-section"><i class="fa fa-pencil"></i></a> </span></div>
                         </div>
                         <div class="">
                            <div class="">
@@ -280,20 +280,20 @@
 										   <div dependency="HPHN" style="width:50%;display:inline-block;float:left">
 										 
 											<b>Phone</b><br>
-                                             <span class="field" id="FIELD_HPHN" style="word-break:break-all;">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN" style="word-break:break-all;">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break" style="width:50%;display:inline-block;float:right">
 										 <b>E-mail</b><br>
-                                             <span class="field" id="FIELD_EMAI" style="word-break:break-all;">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI" style="word-break:break-all;">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
 										</div>
 										  <div dependency="STRT|CITY|STAT|ZIPC" style="width:100%;display:inline-block;padding-top:{{isset($pdf_view)?'45px;':'10px;'}}">
 										    
 									   		<b>Address </b>
-											      <span class="field" id="FIELD_STRT" style="">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY" style="">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT" style="">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC" style="">{{ $resume->zip or '95814'}}</span>
+											      <span class="field" id="FIELD_STRT" style="">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY" style="">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT" style="">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC" style="">{{ $resume->zip ?? '95814'}}</span>
 											
                                           </div>
 										 
@@ -326,11 +326,11 @@
 										         <div dependency="GENDER" style="width:50%;display:inline-block;float:left">
 										 
                                              <b>Gender</b><br>
-										               <span class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</span>
+										               <span class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</span>
                                        </div>
                                        <div dependency="MARITALSTATUS" class="word-break" style="width:50%;display:inline-block;float:right">
                                           <b>Marital Status</b><br>
-										             <span class="field" id="FIELD_MARITALSTATUS" style="word-break:break-all;">{{ $resume->maritalStatus or 'Single' }}</span>
+										             <span class="field" id="FIELD_MARITALSTATUS" style="word-break:break-all;">{{ $resume->maritalStatus ?? 'Single' }}</span>
                                        </div>
 										      </div>
 										  <div style="width:100%;display:inline-block;padding-top:{{isset($pdf_view)?'45px;':'10px;'}}">
@@ -338,12 +338,12 @@
                                        <div dependency="DOB" style="width:50%;display:inline-block;float:left">
 										 
                                           <b>Date of Birth</b><br>
-									               <span class="field" id="FIELD_DOB" style="word-break:break-all;">{{ $resume->dob or date('d-m-Y') }}</span>
+									               <span class="field" id="FIELD_DOB" style="word-break:break-all;">{{ $resume->dob ?? date('d-m-Y') }}</span>
                                         </div>
                                         <div dependency="ORIGINSTATE" class="word-break" style="width:50%;display:inline-block;float:right">
                                           
                                              <b>State of Origin</b><br>
-                                             <span class="field" id="FIELD_ORIGINSTATE" style="word-break:break-all;">{{ $resume->originState or 'Lagos' }}</span>
+                                             <span class="field" id="FIELD_ORIGINSTATE" style="word-break:break-all;">{{ $resume->originState ?? 'Lagos' }}</span>
                                            </div>
                                  </div>
 										 
@@ -363,7 +363,7 @@
                         </div>
                         <div dependency="GENDER" style="width:50%;float:left;padding-left:10px;">
 										 <div><b>Gender:</b>
-										 <span class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</span>
+										 <span class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</span>
 										 </div>
 									  </div> 
                            
@@ -371,18 +371,18 @@
 								
 									 <div dependency="MARITALSTATUS" style="width:50%;float:left;">
 										 <div><b>Marital Status:</b>
-										 <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</span>
+										 <span class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</span>
 										 </div>
 									  </div>
                              <div dependency="ORIGINSTATE" style="width:50%;float:right;">
                               <div><b>State of Origin:</b>
-                              <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</span>
+                              <span class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</span>
                               </div>
                            </div>
 									 
                              <div dependency="DOB" style="width:50%;float:left;padding-left:10px;">
 									 <div><b>Date of Birth:</b>
-									 <span class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</span>
+									 <span class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</span>
 									 </div>
 								  </div>
                         </div>

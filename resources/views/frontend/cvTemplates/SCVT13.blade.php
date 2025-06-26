@@ -210,18 +210,18 @@
 										  <div dependency="HPHN" style="border-bottom:2px solid #DAA520;">
 										 
 											
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break" style="border-bottom:2px solid #DAA520;">
 										 
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
                                           <div dependency="STRT|CITY|STAT|ZIPC" style="border-bottom:2px solid #DAA520;text-align:center">
 									   		
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
 											
                                           </div>
 										  </div>
@@ -289,20 +289,20 @@
 					<div class="biodata" style="text-align:center;">	
 					  <div dependency="ORIGINSTATE" style="padding-bottom:5px;">
 						 <div><b>State of Origin:</b></div>
-						 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+						 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
 					  </div>
 					 
 					  <div dependency="MARITALSTATUS" style="padding-bottom:5px;">
 						 <div><b>Marital Status:</b></div>
-						 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+						 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
 					  </div>
 					   <div dependency="GENDER" style="padding-bottom:5px;">
 						 <div><b>Gender:</b></div>
-						 <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+						 <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
 					  </div>
 					  <div dependency="DOB">
 						 <div><b>Date of Birth:</b></div>
-						 <div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div>
+						 <div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div>
 					  </div>
 					<p>&nbsp;</p>
 					</div>	
@@ -353,11 +353,11 @@
                         <div class="">
                            <div class="">
 						   <div class="name word-break" style="text-transform:uppercase">
-                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-									<div style="width: 100%;text-align: center;line-height: 40px;border-bottom: 1px solid #4267B2;color: #DAA520;margin-top: -22px;font-weight:bold">{{$resume->profession or 'Designer'}}</div>
-                              <!--<div class="resumeTitle " id="FIELD_DCTL" style="border-bottom:1px solid #4267B2;color:#DAA520;">{{$resume->profession or 'Designer'}}</div>-->
+									<div style="width: 100%;text-align: center;line-height: 40px;border-bottom: 1px solid #4267B2;color: #DAA520;margin-top: -22px;font-weight:bold">{{$resume->profession ?? 'Designer'}}</div>
+                              <!--<div class="resumeTitle " id="FIELD_DCTL" style="border-bottom:1px solid #4267B2;color:#DAA520;">{{$resume->profession ?? 'Designer'}}</div>-->
 							 
 							</div>
 						   

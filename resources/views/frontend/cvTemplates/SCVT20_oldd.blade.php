@@ -162,10 +162,10 @@
                         <div class="">
                            <div class="">
 						   <div class="name word-break">
-                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-                              <div class="resumeTitle "id="FIELD_DCTL">{{ $resume->profession or 'Developer' }}</div> 
+                              <div class="resumeTitle "id="FIELD_DCTL">{{ $resume->profession ?? 'Developer' }}</div> 
                            </div>
                         </div>
                      </div>
@@ -452,20 +452,20 @@
 						<div class="biodata">
 						   <div dependency="MARITALSTATUS">
 							 <div><b>Marital Status</b></div>
-							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
 						  </div>
 						  <div dependency="ORIGINSTATE">
 							 <div><b>State of Origin</b></div>
-							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
 						  </div>
 						   <div dependency="GENDER">
 							 <div><b>Gender</b></div>
-							 <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+							 <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
 						  </div>
 						  
 						  <div dependency="DOB">
 							 <div><b>Date of Birth</b></div>
-							 <div class="field" id="FIELD_DOB">{{ $resume->dob or date('d-m-Y') }}</div>
+							 <div class="field" id="FIELD_DOB">{{ $resume->dob ?? date('d-m-Y') }}</div>
 						  </div>
 						
 						</div>	 
@@ -515,24 +515,24 @@
 		<div dependency="HPHN" class="phone">
 										  
 											
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 		</div>
 		<div class="top-2" style="width:200px; height:60px; float:left;background-color:#136d54;">
 			
 		<div dependency="EMAI" class="word-break email">
 										  
-                                             <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                                             <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                           </div>
 		</div>
 		<div class="top-3" style="width:204px; height:60px;float:left;background-color:#136d54;">
 		
 						<div dependency="STRT|CITY|STAT|ZIPC" class="address">
 									   		
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
 											
                                           </div>
 		</div>

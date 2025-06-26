@@ -206,10 +206,10 @@
                         <div class="">
                            <div class="">
 						   <div class="name word-break" style='color:{{isset($resume->color)? $resume->color:"#020432"}};font-size:{{isset($resume->nameSize)? $resume->nameSize:"40px"}};line-height:45px;padding-top:20px;'>
-                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-                              <div class="resumeTitle "><span id="FIELD_DCTL" style="padding:3px 3px 8px 3px;background:#020432;">{{ $resume->profession or 'Developer' }}</span></div> 
+                              <div class="resumeTitle "><span id="FIELD_DCTL" style="padding:3px 3px 8px 3px;background:#020432;">{{ $resume->profession ?? 'Developer' }}</span></div> 
                            </div>
                         </div>
                      </div>
@@ -244,22 +244,22 @@
 											 <img src="{{ url('images/shapeImages/phone.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
 											
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  <div dependency="EMAI" class="word-break">
 										  <span class="fa-stack fa-lg sectiontitle-li">
 											 <img src="{{ url('images/shapeImages/email.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
-                                             <span class="field" id="FIELD_EMAI" style="width:100%;padding-right:20px;">{{ $resume->email or 'example@gmail.com' }}</span> 
+                                             <span class="field" id="FIELD_EMAI" style="width:100%;padding-right:20px;">{{ $resume->email ?? 'example@gmail.com' }}</span> 
                                           </div>
 										  <div dependency="STRT|CITY|STAT|ZIPC">
 									   		<span class="fa-stack fa-lg sectiontitle-li" style="float:left;height: 50px;">
 											 <img src="{{ url('images/shapeImages/location.png')}}" width="27px" style="margin-top: 11px;">
 											</span>
 											<div>
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}} </span>,
-                                             <span class="field" id="FIELD_CITY" style="/*padding-left:30px;position: relative;top: -9px;left: 6px;*/">{{ $resume->city or 'City'}} </span><span dependency="CITY+STAT|ZIPC"></span>
-                                             <span class="field" id="FIELD_STAT" style="/*padding-left:30px;position: relative;top: -10px;left: 6px;*/">{{ $resume->state or 'CA' }} , {{ $resume->zip or '95814'}}</span><span dependency="STAT+ZIPC"></span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}} </span>,
+                                             <span class="field" id="FIELD_CITY" style="/*padding-left:30px;position: relative;top: -9px;left: 6px;*/">{{ $resume->city ?? 'City'}} </span><span dependency="CITY+STAT|ZIPC"></span>
+                                             <span class="field" id="FIELD_STAT" style="/*padding-left:30px;position: relative;top: -10px;left: 6px;*/">{{ $resume->state ?? 'CA' }} , {{ $resume->zip ?? '95814'}}</span><span dependency="STAT+ZIPC"></span>
                                              <span class="field" id="FIELD_ZIPC" style="/*position: relative;top: -10px;left: 6px;*/"></span>
 											 </div>
                                           </div>
@@ -294,7 +294,7 @@
                                                             <img src="{{url('images/shapeImages/phone22.jpg')}}" style="width:1.5rem;height:1.5rem;border-top-left-radius: 13px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;;{{isset($pdf_view)?'margin-top:7px;':''}}" alt="">
                                                             </span>
                                                 
-                                                            <span class="field" id="FIELD_HPHN" style="width: 80%;padding-left:{{isset($pdf_view)?'10px;':'6px'}}">{{ $resume->phone or '916-948-7196' }}</span>
+                                                            <span class="field" id="FIELD_HPHN" style="width: 80%;padding-left:{{isset($pdf_view)?'10px;':'6px'}}">{{ $resume->phone ?? '916-948-7196' }}</span>
                                                 </div>
                                              <div dependency="EMAI" class="word-break" style="width: 100%;">
                                                          <span class="fa-stack fa-lg sectiontitle-li" style="vertical-align: top;margin-top: 4px;width: 15%;max-width: 2rem;display: inline-block;">
@@ -302,7 +302,7 @@
                                                             <i class="fa fa-envelope-o fa-stack-1x "></i> -->
                                                             <img src="{{url('images/shapeImages/mail22.jpg')}}" style="width:1.5rem;height:1.5rem;border-top-left-radius: 13px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;{{isset($pdf_view)?'margin-top:8px;':''}}" alt="">
                                                             </span>
-                                                            <span class="field" id="FIELD_EMAI" style="width: 80%;display: inline-block;padding-left:6px;{{isset($pdf_view)?'margin-top:8px;vertical-align:middle;':''}}">{{ $resume->email or 'example@gmail.com' }}</span>
+                                                            <span class="field" id="FIELD_EMAI" style="width: 80%;display: inline-block;padding-left:6px;{{isset($pdf_view)?'margin-top:8px;vertical-align:middle;':''}}">{{ $resume->email ?? 'example@gmail.com' }}</span>
                                                 </div>
                                                 <div dependency="STRT|CITY|STAT|ZIPC" style="width:100%;">
                                                                <span class="fa-stack fa-lg sectiontitle-li" style="vertical-align: top;margin-top:{{isset($pdf_view)?'0px':'5px'}};width: 15%;max-width: 2rem;display: inline-block;">
@@ -311,10 +311,10 @@
                                                                <img src="{{url('images/shapeImages/location22.jpg?v=1')}}" style="width:1.5rem;height:1.5rem;{{isset($pdf_view)?'margin-top:10px;':''}};border-top-left-radius: 13px;border-top-right-radius: 13px;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;" alt="">
                                                                </span>
                                                                <span style="width: 80%;display: inline-block;padding-left:6px;{{isset($pdf_view)?'margin-top:5px;vertical-align:middle;':''}}">
-                                                                        <span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                                                        <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                                                        <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                                                        <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+                                                                        <span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                                                        <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                                                        <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                                                        <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
                                                                </span>
                                                          </div>
 
@@ -383,15 +383,15 @@
 						  </div>
 						   <div dependency="MARITALSTATUS">
 							 <div><b>Marital Status</b></div>
-							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus or 'Single' }}</div>
+							 <div class="field" id="FIELD_MARITALSTATUS">{{ $resume->maritalStatus ?? 'Single' }}</div>
 						  </div>
 						  <div dependency="ORIGINSTATE">
 							 <div><b>State of Origin</b></div>
-							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState or 'Lagos' }}</div>
+							 <div class="field" id="FIELD_ORIGINSTATE">{{ $resume->originState ?? 'Lagos' }}</div>
 						  </div>
 						   <div dependency="GENDER">
 							 <div><b>Gender</b></div>
-							 <div class="field" id="FIELD_GENDER">{{ $resume->gender or 'Male' }}</div>
+							 <div class="field" id="FIELD_GENDER">{{ $resume->gender ?? 'Male' }}</div>
 						  </div>
 						
 						</div>	

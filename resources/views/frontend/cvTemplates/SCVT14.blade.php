@@ -168,10 +168,10 @@
                               <div id="PARAGRAPH_NAME_30df97fd-1385-4d98-9319-6ebe01086fa2" class="paragraph PARAGRAPH_NAME firstparagraph" style="border-bottom:5px solid #4267B2;padding-bottom:20px;">
                                  <div>
                                     <div class="name word-break" style="text-transform:uppercase">
-                                       <span class="field" id="FIELD_FNAM" style="display:inline-block;width:{{isset($pdf_view)?'52%':'49%'}};padding-right:15px;">{{ $resume->first_name or 'Your'}}</span>
-                                       <span class="field word-break" id="FIELD_LNAM" style="display:inline-block;width:{{isset($pdf_view)?'45%':'48%'}};padding-left:15px;">{{ $resume->last_name or 'Name'}}</span>
+                                       <span class="field" id="FIELD_FNAM" style="display:inline-block;width:{{isset($pdf_view)?'52%':'49%'}};padding-right:15px;">{{ $resume->first_name ?? 'Your'}}</span>
+                                       <span class="field word-break" id="FIELD_LNAM" style="display:inline-block;width:{{isset($pdf_view)?'45%':'48%'}};padding-left:15px;">{{ $resume->last_name ?? 'Name'}}</span>
                                     </div>
-                                    <div class="resumeTitle" id="FIELD_DCTL" style="margin-top:{{isset($pdf_view)?'-15px !important':'16px'}};text-transform:uppercase">{{ $resume->profession or '' }}</div>
+                                    <div class="resumeTitle" id="FIELD_DCTL" style="margin-top:{{isset($pdf_view)?'-15px !important':'16px'}};text-transform:uppercase">{{ $resume->profession ?? '' }}</div>
                                  </div>
                               </div>
                            </div>
@@ -361,19 +361,19 @@
                                              
                                              <div dependency="GENDER">
                                                 <div style="text-transform:uppercase"><b>Gender</b></div>
-                                                <div class="field" id="FIELD_GENDER" style="">{{ $resume->gender or 'Male' }}</div>
+                                                <div class="field" id="FIELD_GENDER" style="">{{ $resume->gender ?? 'Male' }}</div>
                                              </div>
                                              <div dependency="DOB">
                                                 <div style="text-transform:uppercase"><b>Date of Birth</b></div>
-                                                <div class="field" id="FIELD_DOB" style="">{{ $resume->dob or date('d-m-Y') }}</div>
+                                                <div class="field" id="FIELD_DOB" style="">{{ $resume->dob ?? date('d-m-Y') }}</div>
                                              </div>
                                              <div dependency="ORIGINSTATE"style="">
                                                 <div style="text-transform:uppercase"><b>State of Origin</b></div>
-                                                <div class="field" id="FIELD_ORIGINSTATE"style="">{{ $resume->originState or 'Lagos' }}</div>
+                                                <div class="field" id="FIELD_ORIGINSTATE"style="">{{ $resume->originState ?? 'Lagos' }}</div>
                                              </div>
                                              <div dependency="MARITALSTATUS">
                                                 <div style= "text-transform:uppercase"><b>Marital Status</b></div>
-                                                <div class="field" id="FIELD_MARITALSTATUS" style="">{{ $resume->maritalStatus or 'Single' }}</div>
+                                                <div class="field" id="FIELD_MARITALSTATUS" style="">{{ $resume->maritalStatus ?? 'Single' }}</div>
                                              </div>
                                           </div>
                                        </div>
@@ -400,20 +400,20 @@
                                        <div class="singlecolumn">
                                        <div dependency="EMAI" class="word-break" style="padding-top:7px;" >
 										 
-                               <span class="field" id="FIELD_EMAI">{{ $resume->email or 'example@gmail.com' }}</span>
+                               <span class="field" id="FIELD_EMAI">{{ $resume->email ?? 'example@gmail.com' }}</span>
                             </div>
 										  <div dependency="HPHN" style="padding-top:7px;">
 										 
 											
-                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone or '916-948-7196' }}</span>
+                                             <span class="field" id="FIELD_HPHN">{{ $resume->phone ?? '916-948-7196' }}</span>
                                           </div>
 										  
                                           <div dependency="STRT|CITY|STAT|ZIPC" style="padding-top:7px;">
 									   		
-											<span class="field" id="FIELD_STRT">{{ $resume->street or 'Woodland Terrace'}}</span>
-                                             <span class="field" id="FIELD_CITY">{{ $resume->city or 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
-                                             <span class="field" id="FIELD_STAT">{{ $resume->state or 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
-                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip or '95814'}}</span>
+											<span class="field" id="FIELD_STRT">{{ $resume->street ?? 'Woodland Terrace'}}</span>
+                                             <span class="field" id="FIELD_CITY">{{ $resume->city ?? 'Sacramento'}}</span><span dependency="CITY+STAT|ZIPC">,</span>
+                                             <span class="field" id="FIELD_STAT">{{ $resume->state ?? 'CA' }}</span><span dependency="STAT+ZIPC">, </span>
+                                             <span class="field" id="FIELD_ZIPC">{{ $resume->zip ?? '95814'}}</span>
 											
                                           </div>
 										  </div>
